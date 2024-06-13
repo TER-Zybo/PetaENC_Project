@@ -32,3 +32,7 @@ Launch the Xilinx Vivado Design Suite on your computer.
 2. **Open the Project**:
    - In Vivado, select `File > Open Project`.
    - Navigate to the location where you cloned the repository and select the Vivado project file (`.xpr`).
+  
+3. **Create IP**:
+   - In Vivado, select `Tools > Create and Package New IP`
+   - Packaging Options : Select option 2 with `PetaENC`
