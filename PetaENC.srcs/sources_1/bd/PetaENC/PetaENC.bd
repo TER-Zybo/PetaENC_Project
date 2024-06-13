@@ -1,125 +1,22 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x21003AE690AB43D2",
+      "boundary_crc": "0x63E392091CAE7D92",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../PetaENC.gen/sources_1/bd/PetaENC",
       "name": "PetaENC",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1",
+      "tool_version": "2023.2.2",
       "validated": "true"
     },
     "design_tree": {
       "axi_gpio_0": "",
-      "pmod_bridge_0": "",
       "PmodENC_0": "",
-      "xlconstant_0": ""
+      "xlconstant_0": "",
+      "pmod_bridge_0": ""
     },
     "interface_ports": {
-      "Pmod_ENC": {
-        "mode": "Master",
-        "vlnv_bus_definition": "digilentinc.com:interface:pmod:1.0",
-        "vlnv": "digilentinc.com:interface:pmod_rtl:1.0",
-        "port_maps": {
-          "PIN1_O": {
-            "physical_name": "Pmod_ENC_pin1_o",
-            "direction": "O"
-          },
-          "PIN7_I": {
-            "physical_name": "Pmod_ENC_pin7_i",
-            "direction": "I"
-          },
-          "PIN2_O": {
-            "physical_name": "Pmod_ENC_pin2_o",
-            "direction": "O"
-          },
-          "PIN8_I": {
-            "physical_name": "Pmod_ENC_pin8_i",
-            "direction": "I"
-          },
-          "PIN3_O": {
-            "physical_name": "Pmod_ENC_pin3_o",
-            "direction": "O"
-          },
-          "PIN9_I": {
-            "physical_name": "Pmod_ENC_pin9_i",
-            "direction": "I"
-          },
-          "PIN10_O": {
-            "physical_name": "Pmod_ENC_pin10_o",
-            "direction": "O"
-          },
-          "PIN4_O": {
-            "physical_name": "Pmod_ENC_pin4_o",
-            "direction": "O"
-          },
-          "PIN3_I": {
-            "physical_name": "Pmod_ENC_pin3_i",
-            "direction": "I"
-          },
-          "PIN4_I": {
-            "physical_name": "Pmod_ENC_pin4_i",
-            "direction": "I"
-          },
-          "PIN1_I": {
-            "physical_name": "Pmod_ENC_pin1_i",
-            "direction": "I"
-          },
-          "PIN2_I": {
-            "physical_name": "Pmod_ENC_pin2_i",
-            "direction": "I"
-          },
-          "PIN10_T": {
-            "physical_name": "Pmod_ENC_pin10_t",
-            "direction": "O"
-          },
-          "PIN8_T": {
-            "physical_name": "Pmod_ENC_pin8_t",
-            "direction": "O"
-          },
-          "PIN9_T": {
-            "physical_name": "Pmod_ENC_pin9_t",
-            "direction": "O"
-          },
-          "PIN4_T": {
-            "physical_name": "Pmod_ENC_pin4_t",
-            "direction": "O"
-          },
-          "PIN9_O": {
-            "physical_name": "Pmod_ENC_pin9_o",
-            "direction": "O"
-          },
-          "PIN10_I": {
-            "physical_name": "Pmod_ENC_pin10_i",
-            "direction": "I"
-          },
-          "PIN7_T": {
-            "physical_name": "Pmod_ENC_pin7_t",
-            "direction": "O"
-          },
-          "PIN1_T": {
-            "physical_name": "Pmod_ENC_pin1_t",
-            "direction": "O"
-          },
-          "PIN2_T": {
-            "physical_name": "Pmod_ENC_pin2_t",
-            "direction": "O"
-          },
-          "PIN7_O": {
-            "physical_name": "Pmod_ENC_pin7_o",
-            "direction": "O"
-          },
-          "PIN3_T": {
-            "physical_name": "Pmod_ENC_pin3_t",
-            "direction": "O"
-          },
-          "PIN8_O": {
-            "physical_name": "Pmod_ENC_pin8_o",
-            "direction": "O"
-          }
-        }
-      },
       "S_AXI": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
@@ -313,6 +210,122 @@
             "direction": "I"
           }
         }
+      },
+      "GPIO_Top_Row_0": {
+        "mode": "MirroredMaster",
+        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+        "port_maps": {
+          "TRI_O": {
+            "physical_name": "GPIO_Top_Row_0_tri_o",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Pmod_out_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "digilentinc.com:interface:pmod:1.0",
+        "vlnv": "digilentinc.com:interface:pmod_rtl:1.0",
+        "port_maps": {
+          "PIN1_O": {
+            "physical_name": "Pmod_out_0_pin1_o",
+            "direction": "O"
+          },
+          "PIN7_I": {
+            "physical_name": "Pmod_out_0_pin7_i",
+            "direction": "I"
+          },
+          "PIN2_O": {
+            "physical_name": "Pmod_out_0_pin2_o",
+            "direction": "O"
+          },
+          "PIN8_I": {
+            "physical_name": "Pmod_out_0_pin8_i",
+            "direction": "I"
+          },
+          "PIN3_O": {
+            "physical_name": "Pmod_out_0_pin3_o",
+            "direction": "O"
+          },
+          "PIN9_I": {
+            "physical_name": "Pmod_out_0_pin9_i",
+            "direction": "I"
+          },
+          "PIN10_O": {
+            "physical_name": "Pmod_out_0_pin10_o",
+            "direction": "O"
+          },
+          "PIN4_O": {
+            "physical_name": "Pmod_out_0_pin4_o",
+            "direction": "O"
+          },
+          "PIN3_I": {
+            "physical_name": "Pmod_out_0_pin3_i",
+            "direction": "I"
+          },
+          "PIN4_I": {
+            "physical_name": "Pmod_out_0_pin4_i",
+            "direction": "I"
+          },
+          "PIN1_I": {
+            "physical_name": "Pmod_out_0_pin1_i",
+            "direction": "I"
+          },
+          "PIN2_I": {
+            "physical_name": "Pmod_out_0_pin2_i",
+            "direction": "I"
+          },
+          "PIN10_T": {
+            "physical_name": "Pmod_out_0_pin10_t",
+            "direction": "O"
+          },
+          "PIN8_T": {
+            "physical_name": "Pmod_out_0_pin8_t",
+            "direction": "O"
+          },
+          "PIN9_T": {
+            "physical_name": "Pmod_out_0_pin9_t",
+            "direction": "O"
+          },
+          "PIN4_T": {
+            "physical_name": "Pmod_out_0_pin4_t",
+            "direction": "O"
+          },
+          "PIN9_O": {
+            "physical_name": "Pmod_out_0_pin9_o",
+            "direction": "O"
+          },
+          "PIN10_I": {
+            "physical_name": "Pmod_out_0_pin10_i",
+            "direction": "I"
+          },
+          "PIN7_T": {
+            "physical_name": "Pmod_out_0_pin7_t",
+            "direction": "O"
+          },
+          "PIN1_T": {
+            "physical_name": "Pmod_out_0_pin1_t",
+            "direction": "O"
+          },
+          "PIN2_T": {
+            "physical_name": "Pmod_out_0_pin2_t",
+            "direction": "O"
+          },
+          "PIN7_O": {
+            "physical_name": "Pmod_out_0_pin7_o",
+            "direction": "O"
+          },
+          "PIN3_T": {
+            "physical_name": "Pmod_out_0_pin3_t",
+            "direction": "O"
+          },
+          "PIN8_O": {
+            "physical_name": "Pmod_out_0_pin8_o",
+            "direction": "O"
+          }
+        }
       }
     },
     "ports": {
@@ -366,8 +379,9 @@
     "components": {
       "axi_gpio_0": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "ip_revision": "32",
         "xci_name": "PetaENC_axi_gpio_0_0",
-        "xci_path": "ip/PetaENC_axi_gpio_0_0/PetaENC_axi_gpio_0_0.xci",
+        "xci_path": "ip\\PetaENC_axi_gpio_0_0\\PetaENC_axi_gpio_0_0.xci",
         "inst_hier_path": "axi_gpio_0",
         "parameters": {
           "C_ALL_INPUTS": {
@@ -381,24 +395,11 @@
           }
         }
       },
-      "pmod_bridge_0": {
-        "vlnv": "digilentinc.com:ip:pmod_bridge:1.1",
-        "xci_name": "PetaENC_pmod_bridge_0_0",
-        "xci_path": "ip/PetaENC_pmod_bridge_0_0/PetaENC_pmod_bridge_0_0.xci",
-        "inst_hier_path": "pmod_bridge_0",
-        "parameters": {
-          "Bottom_Row_Interface": {
-            "value": "Disabled"
-          },
-          "Top_Row_Interface": {
-            "value": "GPIO"
-          }
-        }
-      },
       "PmodENC_0": {
         "vlnv": "xilinx.com:module_ref:PmodENC:1.0",
+        "ip_revision": "1718284950",
         "xci_name": "PetaENC_PmodENC_0_1",
-        "xci_path": "ip/PetaENC_PmodENC_0_1/PetaENC_PmodENC_0_1.xci",
+        "xci_path": "ip\\PetaENC_PmodENC_0_1\\PetaENC_PmodENC_0_1.xci",
         "inst_hier_path": "PmodENC_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -430,8 +431,9 @@
       },
       "xlconstant_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "8",
         "xci_name": "PetaENC_xlconstant_0_0",
-        "xci_path": "ip/PetaENC_xlconstant_0_0/PetaENC_xlconstant_0_0.xci",
+        "xci_path": "ip\\PetaENC_xlconstant_0_0\\PetaENC_xlconstant_0_0.xci",
         "inst_hier_path": "xlconstant_0",
         "parameters": {
           "CONST_VAL": {
@@ -441,9 +443,30 @@
             "value": "4"
           }
         }
+      },
+      "pmod_bridge_0": {
+        "vlnv": "digilentinc.com:ip:pmod_bridge:1.1",
+        "ip_revision": "8",
+        "xci_name": "PetaENC_pmod_bridge_0_1",
+        "xci_path": "ip\\PetaENC_pmod_bridge_0_1\\PetaENC_pmod_bridge_0_1.xci",
+        "inst_hier_path": "pmod_bridge_0",
+        "parameters": {
+          "Bottom_Row_Interface": {
+            "value": "Disabled"
+          },
+          "Top_Row_Interface": {
+            "value": "GPIO"
+          }
+        }
       }
     },
     "interface_nets": {
+      "Conn": {
+        "interface_ports": [
+          "GPIO_Top_Row_0",
+          "pmod_bridge_0/GPIO_Top_Row"
+        ]
+      },
       "S_AXI_0_1": {
         "interface_ports": [
           "S_AXI",
@@ -452,7 +475,7 @@
       },
       "pmod_bridge_0_Pmod_out": {
         "interface_ports": [
-          "Pmod_ENC",
+          "Pmod_out_0",
           "pmod_bridge_0/Pmod_out"
         ]
       }
@@ -461,8 +484,8 @@
       "Net": {
         "ports": [
           "s_axi_aclk",
-          "axi_gpio_0/s_axi_aclk",
-          "PmodENC_0/clk"
+          "PmodENC_0/clk",
+          "axi_gpio_0/s_axi_aclk"
         ]
       },
       "PmodENC_0_counter": {

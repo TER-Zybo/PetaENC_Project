@@ -1,7 +1,7 @@
-PetaENC_axi_gpio_0_0.vhd,vhdl,xil_defaultlib,../../../../PetaENC.gen/sources_1/bd/PetaENC/ip/PetaENC_axi_gpio_0_0/sim/PetaENC_axi_gpio_0_0.vhd,
+PetaENC_axi_gpio_0_0.vhd,vhdl,xil_defaultlib,../../../bd/PetaENC/ip/PetaENC_axi_gpio_0_0/sim/PetaENC_axi_gpio_0_0.vhd,
 pmod_concat.v,verilog,xil_defaultlib,../../../../PetaENC.gen/sources_1/bd/PetaENC/ipshared/ff0e/src/pmod_concat.v,
-PetaENC_pmod_bridge_0_0.v,verilog,xil_defaultlib,../../../../PetaENC.gen/sources_1/bd/PetaENC/ip/PetaENC_pmod_bridge_0_0/sim/PetaENC_pmod_bridge_0_0.v,
-PetaENC_PmodENC_0_1.vhd,vhdl,xil_defaultlib,../../../../PetaENC.gen/sources_1/bd/PetaENC/ip/PetaENC_PmodENC_0_1/sim/PetaENC_PmodENC_0_1.vhd,
-PetaENC.vhd,vhdl,xil_defaultlib,../../../../PetaENC.gen/sources_1/bd/PetaENC/sim/PetaENC.vhd,
-PetaENC_xlconstant_0_0.v,verilog,xil_defaultlib,../../../../PetaENC.gen/sources_1/bd/PetaENC/ip/PetaENC_xlconstant_0_0/sim/PetaENC_xlconstant_0_0.v,
+PetaENC_pmod_bridge_0_0.v,verilog,xil_defaultlib,../../../bd/PetaENC/ip/PetaENC_pmod_bridge_0_0/sim/PetaENC_pmod_bridge_0_0.v,
+PetaENC_PmodENC_0_1.vhd,vhdl,xil_defaultlib,../../../bd/PetaENC/ip/PetaENC_PmodENC_0_1/sim/PetaENC_PmodENC_0_1.vhd,
+PetaENC_xlconstant_0_0.v,verilog,xil_defaultlib,../../../bd/PetaENC/ip/PetaENC_xlconstant_0_0/sim/PetaENC_xlconstant_0_0.v,
+PetaENC.vhd,vhdl,xil_defaultlib,../../../bd/PetaENC/sim/PetaENC.vhd,
 glbl.v,Verilog,xil_defaultlib,glbl.v

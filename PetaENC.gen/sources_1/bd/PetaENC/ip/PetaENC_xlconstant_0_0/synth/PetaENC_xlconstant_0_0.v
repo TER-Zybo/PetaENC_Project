@@ -11,7 +11,7 @@
 // otherwise provided in a valid license issued to you by
 // AMD, and to the maximum extent permitted by applicable
 // law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-// WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+// WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
 // AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
 // BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
 // INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:ip:xlconstant:1.1
-// IP Revision: 7
+// IP Revision: 8
 
-(* X_CORE_INFO = "xlconstant_v1_1_7_xlconstant,Vivado 2023.1" *)
-(* CHECK_LICENSE_TYPE = "PetaENC_xlconstant_0_0,xlconstant_v1_1_7_xlconstant,{}" *)
-(* CORE_GENERATION_INFO = "PetaENC_xlconstant_0_0,xlconstant_v1_1_7_xlconstant,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconstant,x_ipVersion=1.1,x_ipCoreRevision=7,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,CONST_WIDTH=4,CONST_VAL=0xF}" *)
+(* X_CORE_INFO = "xlconstant_v1_1_8_xlconstant,Vivado 2023.2.2" *)
+(* CHECK_LICENSE_TYPE = "PetaENC_xlconstant_0_0,xlconstant_v1_1_8_xlconstant,{}" *)
+(* CORE_GENERATION_INFO = "PetaENC_xlconstant_0_0,xlconstant_v1_1_8_xlconstant,{x_ipProduct=Vivado 2023.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconstant,x_ipVersion=1.1,x_ipCoreRevision=8,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,CONST_WIDTH=4,CONST_VAL=0xF}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module PetaENC_xlconstant_0_0 (
   dout
@@ -60,7 +60,7 @@ module PetaENC_xlconstant_0_0 (
 
 output wire [3 : 0] dout;
 
-  xlconstant_v1_1_7_xlconstant #(
+  xlconstant_v1_1_8_xlconstant #(
     .CONST_WIDTH(4),
     .CONST_VAL(4'HF)
   ) inst (
