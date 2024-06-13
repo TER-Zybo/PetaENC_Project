@@ -2,6 +2,8 @@
 
 This repository contains a Vivado project for the PmodENC rotary encoder. The project includes all necessary components, such as a debouncer and AXI GPIO, before it was transformed into an [IP block](https://github.com/TER-Zybo/PetaENC_IP).
 
+![Design](design.png)
+
 ## Using the Project as IP Block (Recommended)
 
 If you want to use the project as an IP block, you can refer to the [IP Block - Debouncer and AXI GPIO for the PmodENC](https://github.com/TER-Zybo/PetaENC_IP) repository. This repository contains the IP block version of this project, which can be integrated into other Vivado projects. 
