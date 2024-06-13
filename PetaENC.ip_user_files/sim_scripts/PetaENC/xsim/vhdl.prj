@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../../PetaENC.gen/sources_1/bd/PetaENC/ip/PetaENC_axi_gpio_0_0/sim/PetaENC_axi_gpio_0_0.vhd" \
+"../../../../PetaENC.gen/sources_1/bd/PetaENC/ip/PetaENC_PmodENC_0_1/sim/PetaENC_PmodENC_0_1.vhd" \
+"../../../../PetaENC.gen/sources_1/bd/PetaENC/sim/PetaENC.vhd" \
+
+# Do not sort compile order
+nosort

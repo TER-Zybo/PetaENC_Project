@@ -1,0 +1,373 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "test_PetaENC_PetaENC_0_0",
+    "cell_name": "PetaENC_0",
+    "component_reference": "user.org:user:PetaENC:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../PetaENC.gen/sources_1/bd/test_PetaENC/ip/test_PetaENC_PetaENC_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "test_PetaENC_PetaENC_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "digilentinc.com:zybo-z7-20:part0:1.2" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../PetaENC.gen/sources_1/bd/test_PetaENC/ip/test_PetaENC_PetaENC_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "Pmod_ENC_pin10_i": [ { "direction": "in" } ],
+        "Pmod_ENC_pin10_o": [ { "direction": "out" } ],
+        "Pmod_ENC_pin10_t": [ { "direction": "out" } ],
+        "Pmod_ENC_pin1_i": [ { "direction": "in" } ],
+        "Pmod_ENC_pin1_o": [ { "direction": "out" } ],
+        "Pmod_ENC_pin1_t": [ { "direction": "out" } ],
+        "Pmod_ENC_pin2_i": [ { "direction": "in" } ],
+        "Pmod_ENC_pin2_o": [ { "direction": "out" } ],
+        "Pmod_ENC_pin2_t": [ { "direction": "out" } ],
+        "Pmod_ENC_pin3_i": [ { "direction": "in" } ],
+        "Pmod_ENC_pin3_o": [ { "direction": "out" } ],
+        "Pmod_ENC_pin3_t": [ { "direction": "out" } ],
+        "Pmod_ENC_pin4_i": [ { "direction": "in" } ],
+        "Pmod_ENC_pin4_o": [ { "direction": "out" } ],
+        "Pmod_ENC_pin4_t": [ { "direction": "out" } ],
+        "Pmod_ENC_pin7_i": [ { "direction": "in" } ],
+        "Pmod_ENC_pin7_o": [ { "direction": "out" } ],
+        "Pmod_ENC_pin7_t": [ { "direction": "out" } ],
+        "Pmod_ENC_pin8_i": [ { "direction": "in" } ],
+        "Pmod_ENC_pin8_o": [ { "direction": "out" } ],
+        "Pmod_ENC_pin8_t": [ { "direction": "out" } ],
+        "Pmod_ENC_pin9_i": [ { "direction": "in" } ],
+        "Pmod_ENC_pin9_o": [ { "direction": "out" } ],
+        "Pmod_ENC_pin9_t": [ { "direction": "out" } ],
+        "S_AXI_araddr": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
+        "S_AXI_arready": [ { "direction": "out" } ],
+        "S_AXI_arvalid": [ { "direction": "in" } ],
+        "S_AXI_awaddr": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
+        "S_AXI_awready": [ { "direction": "out" } ],
+        "S_AXI_awvalid": [ { "direction": "in" } ],
+        "S_AXI_bready": [ { "direction": "in" } ],
+        "S_AXI_bresp": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "S_AXI_bvalid": [ { "direction": "out" } ],
+        "S_AXI_rdata": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "S_AXI_rready": [ { "direction": "in" } ],
+        "S_AXI_rresp": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "S_AXI_rvalid": [ { "direction": "out" } ],
+        "S_AXI_wdata": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "S_AXI_wready": [ { "direction": "out" } ],
+        "S_AXI_wstrb": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "S_AXI_wvalid": [ { "direction": "in" } ],
+        "s_axi_aclk": [ { "direction": "in" } ],
+        "s_axi_aresetn": [ { "direction": "in" } ]
+      },
+      "interfaces": {
+        "Pmod_ENC": {
+          "vlnv": "digilentinc.com:interface:pmod:1.0",
+          "abstraction_type": "digilentinc.com:interface:pmod_rtl:1.0",
+          "mode": "master",
+          "parameters": {
+            "BUSIF.BOARD_INTERFACE": [ { "value": "Custom", "value_src": "constant", "value_permission": "bd", "usage": "all" } ]
+          },
+          "port_maps": {
+            "PIN1_O": [ { "physical_name": "Pmod_ENC_pin1_o" } ],
+            "PIN7_I": [ { "physical_name": "Pmod_ENC_pin7_i" } ],
+            "PIN2_O": [ { "physical_name": "Pmod_ENC_pin2_o" } ],
+            "PIN8_I": [ { "physical_name": "Pmod_ENC_pin8_i" } ],
+            "PIN3_O": [ { "physical_name": "Pmod_ENC_pin3_o" } ],
+            "PIN9_I": [ { "physical_name": "Pmod_ENC_pin9_i" } ],
+            "PIN10_O": [ { "physical_name": "Pmod_ENC_pin10_o" } ],
+            "PIN4_O": [ { "physical_name": "Pmod_ENC_pin4_o" } ],
+            "PIN3_I": [ { "physical_name": "Pmod_ENC_pin3_i" } ],
+            "PIN4_I": [ { "physical_name": "Pmod_ENC_pin4_i" } ],
+            "PIN1_I": [ { "physical_name": "Pmod_ENC_pin1_i" } ],
+            "PIN2_I": [ { "physical_name": "Pmod_ENC_pin2_i" } ],
+            "PIN10_T": [ { "physical_name": "Pmod_ENC_pin10_t" } ],
+            "PIN8_T": [ { "physical_name": "Pmod_ENC_pin8_t" } ],
+            "PIN9_T": [ { "physical_name": "Pmod_ENC_pin9_t" } ],
+            "PIN4_T": [ { "physical_name": "Pmod_ENC_pin4_t" } ],
+            "PIN9_O": [ { "physical_name": "Pmod_ENC_pin9_o" } ],
+            "PIN10_I": [ { "physical_name": "Pmod_ENC_pin10_i" } ],
+            "PIN7_T": [ { "physical_name": "Pmod_ENC_pin7_t" } ],
+            "PIN1_T": [ { "physical_name": "Pmod_ENC_pin1_t" } ],
+            "PIN2_T": [ { "physical_name": "Pmod_ENC_pin2_t" } ],
+            "PIN7_O": [ { "physical_name": "Pmod_ENC_pin7_o" } ],
+            "PIN3_T": [ { "physical_name": "Pmod_ENC_pin3_t" } ],
+            "PIN8_O": [ { "physical_name": "Pmod_ENC_pin8_o" } ]
+          }
+        },
+        "S_AXI": {
+          "vlnv": "xilinx.com:interface:aximm:1.0",
+          "abstraction_type": "xilinx.com:interface:aximm_rtl:1.0",
+          "mode": "slave",
+          "memory_map_ref": "S_AXI",
+          "parameters": {
+            "DATA_WIDTH": [ { "value": "32", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "PROTOCOL": [ { "value": "AXI4LITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "ID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "ADDR_WIDTH": [ { "value": "16", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "AWUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "ARUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "WUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "RUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "BUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "HAS_BURST": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "HAS_LOCK": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "HAS_PROT": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "HAS_CACHE": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "HAS_QOS": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "HAS_REGION": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "HAS_WSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "HAS_BRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "HAS_RRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "NUM_READ_OUTSTANDING": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "MAX_BURST_LENGTH": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "PHASE": [ { "value": "0.0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "NUM_READ_THREADS": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "NUM_WRITE_THREADS": [ { "value": "1", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "CLK_DOMAIN": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "ARADDR": [ { "physical_name": "S_AXI_araddr", "physical_left": "8", "physical_right": "0" } ],
+            "ARREADY": [ { "physical_name": "S_AXI_arready" } ],
+            "ARVALID": [ { "physical_name": "S_AXI_arvalid" } ],
+            "AWADDR": [ { "physical_name": "S_AXI_awaddr", "physical_left": "8", "physical_right": "0" } ],
+            "AWREADY": [ { "physical_name": "S_AXI_awready" } ],
+            "AWVALID": [ { "physical_name": "S_AXI_awvalid" } ],
+            "BREADY": [ { "physical_name": "S_AXI_bready" } ],
+            "BRESP": [ { "physical_name": "S_AXI_bresp", "physical_left": "1", "physical_right": "0" } ],
+            "BVALID": [ { "physical_name": "S_AXI_bvalid" } ],
+            "RDATA": [ { "physical_name": "S_AXI_rdata", "physical_left": "31", "physical_right": "0" } ],
+            "RREADY": [ { "physical_name": "S_AXI_rready" } ],
+            "RRESP": [ { "physical_name": "S_AXI_rresp", "physical_left": "1", "physical_right": "0" } ],
+            "RVALID": [ { "physical_name": "S_AXI_rvalid" } ],
+            "WDATA": [ { "physical_name": "S_AXI_wdata", "physical_left": "31", "physical_right": "0" } ],
+            "WREADY": [ { "physical_name": "S_AXI_wready" } ],
+            "WSTRB": [ { "physical_name": "S_AXI_wstrb", "physical_left": "3", "physical_right": "0" } ],
+            "WVALID": [ { "physical_name": "S_AXI_wvalid" } ]
+          }
+        },
+        "CLK.S_AXI_ACLK": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "PHASE": [ { "value": "0.0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "ASSOCIATED_BUSIF": [ { "value": "S_AXI", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "ASSOCIATED_RESET": [ { "value": "s_axi_aresetn", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "CLK_DOMAIN": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "s_axi_aclk" } ]
+          }
+        },
+        "RST.S_AXI_ARESETN": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "s_axi_aresetn" } ]
+          }
+        }
+      },
+      "memory_maps": {
+        "S_AXI": {
+          "description": "{SEG_axi_gpio_0_Reg;/axi_gpio_0/S_AXI/Reg;0x000;4K;xilinx.com:ip:axi_gpio:2.0;register;/axi_gpio_0;S_AXI;NONE;NONE}",
+          "address_blocks": {
+            "Reg0": {
+              "base_address": "0x000",
+              "range": "0x00001000",
+              "display_name": "/axi_gpio_0:Reg",
+              "usage": "register",
+              "registers": {
+                "GPIO_DATA": {
+                  "address_offset": "0x0",
+                  "size": 4,
+                  "display_name": "Channel_1_GPIO_DATA",
+                  "description": "Channel-1 AXI GPIO Data register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Channel_1_GPIO_DATA": {
+                      "bit_offset": 0,
+                      "bit_width": 4,
+                      "display_name": "Channel_1_GPIO_DATA",
+                      "description": "AXI GPIO Data Register.\nFor each I/O bit programmed as input\n  R - Reads value on the input pin.\n  W - No effect.\nFor each I/O bit programmed as output\n  R - Reads value on GPIO_O pins\n  W - Writes value to the corresponding AXI GPIO \n      data register bit and output pin\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "GPIO_TRI": {
+                  "address_offset": "0x4",
+                  "size": 4,
+                  "display_name": "Channel_1_GPIO_TRI",
+                  "description": "Channel-1 AXI GPIO 3-State Control register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Channel_1_GPIO_TRI": {
+                      "bit_offset": 0,
+                      "bit_width": 4,
+                      "display_name": "Channel_1_GPIO_DATA",
+                      "description": "AXI GPIO 3-State Control Register\nEach I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "GPIO2_DATA": {
+                  "address_offset": "0x8",
+                  "size": 32,
+                  "display_name": "Channel_2_GPIO_DATA",
+                  "description": "Channel-2 AXI GPIO Data register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Channel_2_GPIO_DATA": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Channel_2_GPIO_DATA",
+                      "description": "AXI GPIO Data Register.\nFor each I/O bit programmed as input\n  R - Reads value on the input pin.\n  W - No effect.\nFor each I/O bit programmed as output\n  R - Reads value on GPIO_O pins\n  W - Writes value to the corresponding AXI GPIO \n      data register bit and output pin\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "GPIO2_TRI": {
+                  "address_offset": "0xC",
+                  "size": 32,
+                  "display_name": "Channel_2_GPIO_TRI",
+                  "description": "Channel-2 AXI GPIO 3-State Control register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Channel_2_GPIO_TRI": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Channel_2_GPIO_DATA",
+                      "description": "AXI GPIO 3-State Control Register\nEach I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "GIER": {
+                  "address_offset": "0x11C",
+                  "size": 32,
+                  "display_name": "Global_Interrupt_Enable register",
+                  "description": "Global_Interrupt_Enable register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Global_Interrupt_Enable": {
+                      "bit_offset": 31,
+                      "bit_width": 1,
+                      "display_name": "Global_Interrupt_Enable",
+                      "description": "Master enable for the device interrupt output\n  0 - Disabled\n  1 - Enabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "IP_IER": {
+                  "address_offset": "0x128",
+                  "size": 32,
+                  "display_name": "IP Interrupt Enable register",
+                  "description": "IP Interrupt Enable register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Channel_1_Interrupt_Enable": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "display_name": "Channel_1_Interrupt_Enable",
+                      "description": "Enable Channel 1 Interrupt\n  0 - Disabled (masked)\n  1 - Enabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Channel_2_Interrupt_Enable": {
+                      "bit_offset": 1,
+                      "bit_width": 1,
+                      "display_name": "Channel_2_Interrupt_Enable",
+                      "description": "Enable Channel 2 Interrupt\n  0 - Disabled (masked)\n  1 - Enabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "IP_ISR": {
+                  "address_offset": "0x120",
+                  "size": 32,
+                  "display_name": "IP Interrupt Status register",
+                  "description": "IP Interrupt Status register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Channel_1_Interrupt_Status": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "display_name": "Channel_1_Interrupt_Status",
+                      "description": "Channel 1 Interrupt Status\n  0 - No Channel 1 input interrupt\n  1 - Channel 1 input interrupt\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Channel_2_Interrupt_Status": {
+                      "bit_offset": 1,
+                      "bit_width": 1,
+                      "display_name": "Channel_2_Interrupt_Status",
+                      "description": "Channel 2 Interrupt Status\n  0 - No Channel 2 input interrupt\n  1 - Channel 2 input interrupt\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
