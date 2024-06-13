@@ -1,5 +1,7 @@
 # Vivado Project for PmodENC with Debouncer and AXI GPIO
 
+> This project was built with Vivado 2023.1. Please check branches to find updated versions.
+
 This repository contains a Vivado project for the PmodENC rotary encoder. The project includes all necessary components, such as a debouncer and AXI GPIO, before it was transformed into an [IP block](https://github.com/TER-Zybo/PetaENC_IP).
 
 ![Design](design.png)
