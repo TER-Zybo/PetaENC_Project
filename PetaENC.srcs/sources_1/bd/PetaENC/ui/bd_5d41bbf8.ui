@@ -7,27 +7,25 @@
    "Grouping and No Loops_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
 preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
-preplace port GPIO_Top_Row_0 -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
-preplace port Pmod_out_0 -pg 1 -lvl 3 -x 600 -y 260 -defaultsOSRD
+preplace port Pmod_out_0 -pg 1 -lvl 3 -x 580 -y 260 -defaultsOSRD
 preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
 preplace port port-id_s_axi_aresetn -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 150 -y 100 -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 20L -pinDir GPIO right -pinY GPIO 20R -pinDir GPIO.gpio_io_i right -pinY GPIO.gpio_io_i 40R -pinDir s_axi_aclk left -pinY s_axi_aclk 40L -pinDir s_axi_aresetn left -pinY s_axi_aresetn 80L
-preplace inst PmodENC_0 -pg 1 -lvl 2 -x 440 -y 40 -swap {0 2 1} -defaultsOSRD -pinDir clk left -pinY clk 20L -pinBusDir Pmod_top left -pinBusY Pmod_top 120L -pinBusDir counter left -pinBusY counter 100L
+preplace inst PmodENC_0 -pg 1 -lvl 2 -x 420 -y 40 -swap {0 2 1} -defaultsOSRD -pinDir clk left -pinY clk 20L -pinBusDir Pmod_top left -pinBusY Pmod_top 120L -pinBusDir counter left -pinBusY counter 100L
 preplace inst xlconstant_0 -pg 1 -lvl 1 -x 150 -y 280 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
-preplace inst pmod_bridge_0 -pg 1 -lvl 2 -x 440 -y 240 -defaultsOSRD -pinDir Pmod_out right -pinY Pmod_out 20R -pinDir GPIO_Top_Row left -pinY GPIO_Top_Row 20L -pinDir GPIO_Top_Row.in_top_bus_O left -pinY GPIO_Top_Row.in_top_bus_O 40L -pinDir GPIO_Top_Row.in_top_bus_T left -pinY GPIO_Top_Row.in_top_bus_T 60L -pinDir GPIO_Top_Row.in_top_bus_I left -pinY GPIO_Top_Row.in_top_bus_I 80L
+preplace inst pmod_bridge_0 -pg 1 -lvl 2 -x 420 -y 240 -defaultsOSRD -pinDir Pmod_out right -pinY Pmod_out 20R -pinDir GPIO_Top_Row left -pinY GPIO_Top_Row 20L -pinDir GPIO_Top_Row.in_top_bus_O left -pinY GPIO_Top_Row.in_top_bus_O 40L -pinDir GPIO_Top_Row.in_top_bus_T left -pinY GPIO_Top_Row.in_top_bus_T 60L -pinDir GPIO_Top_Row.in_top_bus_I left -pinY GPIO_Top_Row.in_top_bus_I 80L
 preplace netloc Net 1 0 2 20 60 NJ
 preplace netloc PmodENC_0_counter 1 1 1 N 140
 preplace netloc s_axi_aresetn_0_1 1 0 1 NJ 180
 preplace netloc xlconstant_0_dout 1 1 1 N 300
-preplace netloc pmod_bridge_0_in_top_bus_I 1 1 1 300 160n
+preplace netloc pmod_bridge_0_in_top_bus_I 1 1 1 280 160n
 preplace netloc S_AXI_0_1 1 0 1 NJ 120
-preplace netloc Conn 1 0 2 20J 240 280J
 preplace netloc pmod_bridge_0_Pmod_out 1 2 1 N 260
-levelinfo -pg 1 0 150 440 600
-pagesize -pg 1 -db -bbox -sgen -160 0 730 380
+levelinfo -pg 1 0 150 420 580
+pagesize -pg 1 -db -bbox -sgen -130 0 710 380
 ",
    "Grouping and No Loops_ScaleFactor":"1.25",
-   "Grouping and No Loops_TopLeft":"-339,-86",
+   "Grouping and No Loops_TopLeft":"-326,-86",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
 preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD

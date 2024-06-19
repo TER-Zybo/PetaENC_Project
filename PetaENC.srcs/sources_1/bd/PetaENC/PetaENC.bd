@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x63E392091CAE7D92",
+      "boundary_crc": "0xE1E9BA027E8CBA8A",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../PetaENC.gen/sources_1/bd/PetaENC",
       "name": "PetaENC",
@@ -208,19 +208,6 @@
           "WVALID": {
             "physical_name": "S_AXI_wvalid",
             "direction": "I"
-          }
-        }
-      },
-      "GPIO_Top_Row_0": {
-        "mode": "MirroredMaster",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_O": {
-            "physical_name": "GPIO_Top_Row_0_tri_o",
-            "direction": "I",
-            "left": "3",
-            "right": "0"
           }
         }
       },
@@ -461,12 +448,6 @@
       }
     },
     "interface_nets": {
-      "Conn": {
-        "interface_ports": [
-          "GPIO_Top_Row_0",
-          "pmod_bridge_0/GPIO_Top_Row"
-        ]
-      },
       "S_AXI_0_1": {
         "interface_ports": [
           "S_AXI",
