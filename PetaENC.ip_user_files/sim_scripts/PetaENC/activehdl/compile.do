@@ -32,12 +32,6 @@ vcom -work axi_gpio_v2_0_32 -93  \
 
 vcom -work xil_defaultlib -93  \
 "../../../bd/PetaENC/ip/PetaENC_axi_gpio_0_0/sim/PetaENC_axi_gpio_0_0.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 -l axi_lite_ipif_v3_0_4 -l lib_cdc_v1_0_2 -l interrupt_control_v3_1_5 -l axi_gpio_v2_0_32 -l xil_defaultlib -l xlconstant_v1_1_8 \
-"../../../../PetaENC.gen/sources_1/bd/PetaENC/ipshared/ff0e/src/pmod_concat.v" \
-"../../../bd/PetaENC/ip/PetaENC_pmod_bridge_0_0/sim/PetaENC_pmod_bridge_0_0.v" \
-
-vcom -work xil_defaultlib -93  \
 "../../../bd/PetaENC/ip/PetaENC_PmodENC_0_1/sim/PetaENC_PmodENC_0_1.vhd" \
 
 vlog -work xlconstant_v1_1_8  -v2k5 -l axi_lite_ipif_v3_0_4 -l lib_cdc_v1_0_2 -l interrupt_control_v3_1_5 -l axi_gpio_v2_0_32 -l xil_defaultlib -l xlconstant_v1_1_8 \
@@ -45,6 +39,8 @@ vlog -work xlconstant_v1_1_8  -v2k5 -l axi_lite_ipif_v3_0_4 -l lib_cdc_v1_0_2 -l
 
 vlog -work xil_defaultlib  -v2k5 -l axi_lite_ipif_v3_0_4 -l lib_cdc_v1_0_2 -l interrupt_control_v3_1_5 -l axi_gpio_v2_0_32 -l xil_defaultlib -l xlconstant_v1_1_8 \
 "../../../bd/PetaENC/ip/PetaENC_xlconstant_0_0/sim/PetaENC_xlconstant_0_0.v" \
+"../../../../PetaENC.gen/sources_1/bd/PetaENC/ipshared/ff0e/src/pmod_concat.v" \
+"../../../bd/PetaENC/ip/PetaENC_pmod_bridge_0_1/sim/PetaENC_pmod_bridge_0_1.v" \
 
 vcom -work xil_defaultlib -93  \
 "../../../bd/PetaENC/sim/PetaENC.vhd" \

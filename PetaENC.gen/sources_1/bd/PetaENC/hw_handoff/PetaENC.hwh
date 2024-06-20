@@ -1,14 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 13 15:45:30 2024" VIVADOVERSION="2023.2.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 20 11:35:56 2024" VIVADOVERSION="2023.2.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="PetaENC" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" LEFT="3" NAME="GPIO_Top_Row_0_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="pmod_bridge_0_in_top_bus_O">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="pmod_bridge_0" PORT="in_top_bus_O"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="Pmod_out_0_pin10_i" SIGIS="undef" SIGNAME="pmod_bridge_0_out7_I">
       <CONNECTIONS>
         <CONNECTION INSTANCE="pmod_bridge_0" PORT="out7_I"/>
@@ -286,11 +281,6 @@
         <PERIPHERAL INSTANCE="axi_gpio_0"/>
       </PERIPHERALS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="External_Interface_GPIO_Top_Row_0" NAME="GPIO_Top_Row_0" TYPE="TARGET">
-      <PORTMAPS>
-        <PORTMAP LOGICAL="TRI_O" PHYSICAL="GPIO_Top_Row_0_tri_o"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="pmod_bridge_0_Pmod_out" NAME="Pmod_out_0" TYPE="INITIATOR">
       <PORTMAPS>
         <PORTMAP LOGICAL="PIN10_I" PHYSICAL="Pmod_out_0_pin10_i"/>
@@ -329,7 +319,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Pmod_top" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="Pmod_top" RIGHT="0" SIGIS="undef" SIGNAME="pmod_bridge_0_in_top_bus_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pmod_bridge_0" PORT="in_top_bus_I"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_s_axi_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="s_axi_aclk"/>
@@ -549,9 +543,15 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="in_top_bus_O" RIGHT="0" SIGIS="undef" SIGNAME="pmod_bridge_0_in_top_bus_O">
+        <PORT DIR="O" LEFT="3" NAME="in_top_bus_I" RIGHT="0" SIGIS="undef" SIGNAME="pmod_bridge_0_in_top_bus_I">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="PetaENC_imp" PORT="GPIO_Top_Row_0_tri_o"/>
+            <CONNECTION INSTANCE="PmodENC_0" PORT="Pmod_top"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="in_top_bus_O" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="in_top_bus_T" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="out0_I" SIGIS="undef" SIGNAME="pmod_bridge_0_out0_I">
@@ -704,9 +704,11 @@
             <PORTMAP LOGICAL="PIN9_T" PHYSICAL="out6_T"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="External_Interface_GPIO_Top_Row_0" NAME="GPIO_Top_Row" TYPE="TARGET" VLNV="xilinx.com:interface:gpio:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO_Top_Row" TYPE="TARGET" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="in_top_bus_I"/>
             <PORTMAP LOGICAL="TRI_O" PHYSICAL="in_top_bus_O"/>
+            <PORTMAP LOGICAL="TRI_T" PHYSICAL="in_top_bus_T"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>

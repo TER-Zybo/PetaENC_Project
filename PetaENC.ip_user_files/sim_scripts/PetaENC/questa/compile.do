@@ -29,12 +29,6 @@ vcom -work axi_gpio_v2_0_32  -93  \
 
 vcom -work xil_defaultlib  -93  \
 "../../../bd/PetaENC/ip/PetaENC_axi_gpio_0_0/sim/PetaENC_axi_gpio_0_0.vhd" \
-
-vlog -work xil_defaultlib  -incr -mfcu  \
-"../../../../PetaENC.gen/sources_1/bd/PetaENC/ipshared/ff0e/src/pmod_concat.v" \
-"../../../bd/PetaENC/ip/PetaENC_pmod_bridge_0_0/sim/PetaENC_pmod_bridge_0_0.v" \
-
-vcom -work xil_defaultlib  -93  \
 "../../../bd/PetaENC/ip/PetaENC_PmodENC_0_1/sim/PetaENC_PmodENC_0_1.vhd" \
 
 vlog -work xlconstant_v1_1_8  -incr -mfcu  \
@@ -42,6 +36,8 @@ vlog -work xlconstant_v1_1_8  -incr -mfcu  \
 
 vlog -work xil_defaultlib  -incr -mfcu  \
 "../../../bd/PetaENC/ip/PetaENC_xlconstant_0_0/sim/PetaENC_xlconstant_0_0.v" \
+"../../../../PetaENC.gen/sources_1/bd/PetaENC/ipshared/ff0e/src/pmod_concat.v" \
+"../../../bd/PetaENC/ip/PetaENC_pmod_bridge_0_1/sim/PetaENC_pmod_bridge_0_1.v" \
 
 vcom -work xil_defaultlib  -93  \
 "../../../bd/PetaENC/sim/PetaENC.vhd" \

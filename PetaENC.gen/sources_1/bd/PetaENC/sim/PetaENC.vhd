@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2.2 (win64) Build 4081461 Thu Dec 14 12:24:51 MST 2023
---Date        : Thu Jun 13 15:45:30 2024
+--Date        : Thu Jun 20 11:35:56 2024
 --Host        : LAPTOP-DWAYNE running 64-bit major release  (build 9200)
 --Command     : generate_target PetaENC.bd
 --Design      : PetaENC
@@ -14,7 +14,6 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity PetaENC is
   port (
-    GPIO_Top_Row_0_tri_o : in STD_LOGIC_VECTOR ( 3 downto 0 );
     Pmod_out_0_pin10_i : in STD_LOGIC;
     Pmod_out_0_pin10_o : out STD_LOGIC;
     Pmod_out_0_pin10_t : out STD_LOGIC;
@@ -135,7 +134,6 @@ architecture STRUCTURE of PetaENC is
     out7_T : out STD_LOGIC
   );
   end component PetaENC_pmod_bridge_0_1;
-  signal Conn_TRI_O : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal Net : STD_LOGIC;
   signal PmodENC_0_counter : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal S_AXI_0_1_ARADDR : STD_LOGIC_VECTOR ( 8 downto 0 );
@@ -224,7 +222,6 @@ architecture STRUCTURE of PetaENC is
   attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, CLK_DOMAIN PetaENC_s_axi_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST";
   attribute X_INTERFACE_PARAMETER of s_axi_aresetn : signal is "XIL_INTERFACENAME RST.S_AXI_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
-  attribute X_INTERFACE_INFO of GPIO_Top_Row_0_tri_o : signal is "xilinx.com:interface:gpio:1.0 GPIO_Top_Row_0 TRI_O";
   attribute X_INTERFACE_INFO of S_AXI_araddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
   attribute X_INTERFACE_PARAMETER of S_AXI_araddr : signal is "XIL_INTERFACENAME S_AXI, ADDR_WIDTH 16, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN PetaENC_s_axi_aclk, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
   attribute X_INTERFACE_INFO of S_AXI_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
@@ -234,7 +231,6 @@ architecture STRUCTURE of PetaENC is
   attribute X_INTERFACE_INFO of S_AXI_wdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI WDATA";
   attribute X_INTERFACE_INFO of S_AXI_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
 begin
-  Conn_TRI_O(3 downto 0) <= GPIO_Top_Row_0_tri_o(3 downto 0);
   Net <= s_axi_aclk;
   Pmod_out_0_pin10_o <= pmod_bridge_0_Pmod_out_PIN10_O;
   Pmod_out_0_pin10_t <= pmod_bridge_0_Pmod_out_PIN10_T;
@@ -312,7 +308,7 @@ axi_gpio_0: component PetaENC_axi_gpio_0_0
 pmod_bridge_0: component PetaENC_pmod_bridge_0_1
      port map (
       in_top_bus_I(3 downto 0) => pmod_bridge_0_in_top_bus_I(3 downto 0),
-      in_top_bus_O(3 downto 0) => Conn_TRI_O(3 downto 0),
+      in_top_bus_O(3 downto 0) => B"0000",
       in_top_bus_T(3 downto 0) => xlconstant_0_dout(3 downto 0),
       out0_I => pmod_bridge_0_Pmod_out_PIN1_I,
       out0_O => pmod_bridge_0_Pmod_out_PIN1_O,

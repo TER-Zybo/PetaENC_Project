@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2.2 (win64) Build 4081461 Thu Dec 14 12:24:51 MST 2023
---Date        : Thu Jun 13 15:45:30 2024
+--Date        : Thu Jun 20 11:35:56 2024
 --Host        : LAPTOP-DWAYNE running 64-bit major release  (build 9200)
 --Command     : generate_target PetaENC_wrapper.bd
 --Design      : PetaENC_wrapper
@@ -14,7 +14,6 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity PetaENC_wrapper is
   port (
-    GPIO_Top_Row_0_tri_o : in STD_LOGIC_VECTOR ( 3 downto 0 );
     Pmod_out_0_pin10_io : inout STD_LOGIC;
     Pmod_out_0_pin1_io : inout STD_LOGIC;
     Pmod_out_0_pin2_io : inout STD_LOGIC;
@@ -65,9 +64,6 @@ architecture STRUCTURE of PetaENC_wrapper is
     S_AXI_wready : out STD_LOGIC;
     S_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S_AXI_wvalid : in STD_LOGIC;
-    s_axi_aclk : in STD_LOGIC;
-    s_axi_aresetn : in STD_LOGIC;
-    GPIO_Top_Row_0_tri_o : in STD_LOGIC_VECTOR ( 3 downto 0 );
     Pmod_out_0_pin1_o : out STD_LOGIC;
     Pmod_out_0_pin7_i : in STD_LOGIC;
     Pmod_out_0_pin2_o : out STD_LOGIC;
@@ -91,7 +87,9 @@ architecture STRUCTURE of PetaENC_wrapper is
     Pmod_out_0_pin2_t : out STD_LOGIC;
     Pmod_out_0_pin7_o : out STD_LOGIC;
     Pmod_out_0_pin3_t : out STD_LOGIC;
-    Pmod_out_0_pin8_o : out STD_LOGIC
+    Pmod_out_0_pin8_o : out STD_LOGIC;
+    s_axi_aclk : in STD_LOGIC;
+    s_axi_aresetn : in STD_LOGIC
   );
   end component PetaENC;
   component IOBUF is
@@ -129,7 +127,6 @@ architecture STRUCTURE of PetaENC_wrapper is
 begin
 PetaENC_i: component PetaENC
      port map (
-      GPIO_Top_Row_0_tri_o(3 downto 0) => GPIO_Top_Row_0_tri_o(3 downto 0),
       Pmod_out_0_pin10_i => Pmod_out_0_pin10_i,
       Pmod_out_0_pin10_o => Pmod_out_0_pin10_o,
       Pmod_out_0_pin10_t => Pmod_out_0_pin10_t,

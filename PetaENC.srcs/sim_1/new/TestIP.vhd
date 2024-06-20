@@ -79,14 +79,14 @@ end process P_E_s_axi_aclk;
 
 p_ipenc : entity work.PetaENC_wrapper
     port map (
-        Pmod_ENC_pin10_io => E_Pmod_ENC_pin10_io,
-        Pmod_ENC_pin1_io => E_Pmod_ENC_pin1_io,
-        Pmod_ENC_pin2_io => E_Pmod_ENC_pin2_io,
-        Pmod_ENC_pin3_io => E_Pmod_ENC_pin3_io,
-        Pmod_ENC_pin4_io => E_Pmod_ENC_pin4_io,
-        Pmod_ENC_pin7_io => E_Pmod_ENC_pin7_io,
-        Pmod_ENC_pin8_io => E_Pmod_ENC_pin8_io,
-        Pmod_ENC_pin9_io => E_Pmod_ENC_pin9_io,
+        Pmod_out_0_pin10_io => E_Pmod_ENC_pin10_io,
+        Pmod_out_0_pin1_io => E_Pmod_ENC_pin1_io,
+        Pmod_out_0_pin2_io => E_Pmod_ENC_pin2_io,
+        Pmod_out_0_pin3_io => E_Pmod_ENC_pin3_io,
+        Pmod_out_0_pin4_io => E_Pmod_ENC_pin4_io,
+        Pmod_out_0_pin7_io => E_Pmod_ENC_pin7_io,
+        Pmod_out_0_pin8_io => E_Pmod_ENC_pin8_io,
+        Pmod_out_0_pin9_io => E_Pmod_ENC_pin9_io,
         S_AXI_araddr => E_S_AXI_araddr,
         S_AXI_arready => E_S_AXI_arready,
         S_AXI_arvalid => E_S_AXI_arvalid,

@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2.2 (win64) Build 4081461 Thu Dec 14 12:24:51 MST 2023
---Date        : Thu Jun 13 15:26:45 2024
+--Date        : Thu Jun 20 11:35:56 2024
 --Host        : LAPTOP-DWAYNE running 64-bit major release  (build 9200)
 --Command     : generate_target PetaENC.bd
 --Design      : PetaENC
@@ -14,6 +14,30 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity PetaENC is
   port (
+    Pmod_out_0_pin10_i : in STD_LOGIC;
+    Pmod_out_0_pin10_o : out STD_LOGIC;
+    Pmod_out_0_pin10_t : out STD_LOGIC;
+    Pmod_out_0_pin1_i : in STD_LOGIC;
+    Pmod_out_0_pin1_o : out STD_LOGIC;
+    Pmod_out_0_pin1_t : out STD_LOGIC;
+    Pmod_out_0_pin2_i : in STD_LOGIC;
+    Pmod_out_0_pin2_o : out STD_LOGIC;
+    Pmod_out_0_pin2_t : out STD_LOGIC;
+    Pmod_out_0_pin3_i : in STD_LOGIC;
+    Pmod_out_0_pin3_o : out STD_LOGIC;
+    Pmod_out_0_pin3_t : out STD_LOGIC;
+    Pmod_out_0_pin4_i : in STD_LOGIC;
+    Pmod_out_0_pin4_o : out STD_LOGIC;
+    Pmod_out_0_pin4_t : out STD_LOGIC;
+    Pmod_out_0_pin7_i : in STD_LOGIC;
+    Pmod_out_0_pin7_o : out STD_LOGIC;
+    Pmod_out_0_pin7_t : out STD_LOGIC;
+    Pmod_out_0_pin8_i : in STD_LOGIC;
+    Pmod_out_0_pin8_o : out STD_LOGIC;
+    Pmod_out_0_pin8_t : out STD_LOGIC;
+    Pmod_out_0_pin9_i : in STD_LOGIC;
+    Pmod_out_0_pin9_o : out STD_LOGIC;
+    Pmod_out_0_pin9_t : out STD_LOGIC;
     S_AXI_araddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
     S_AXI_arready : out STD_LOGIC;
     S_AXI_arvalid : in STD_LOGIC;
@@ -67,7 +91,19 @@ architecture STRUCTURE of PetaENC is
     gpio_io_t : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component PetaENC_axi_gpio_0_0;
-  component PetaENC_pmod_bridge_0_0 is
+  component PetaENC_PmodENC_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    Pmod_top : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    counter : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component PetaENC_PmodENC_0_1;
+  component PetaENC_xlconstant_0_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component PetaENC_xlconstant_0_0;
+  component PetaENC_pmod_bridge_0_1 is
   port (
     in_top_bus_I : out STD_LOGIC_VECTOR ( 3 downto 0 );
     in_top_bus_O : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -97,19 +133,7 @@ architecture STRUCTURE of PetaENC is
     out6_T : out STD_LOGIC;
     out7_T : out STD_LOGIC
   );
-  end component PetaENC_pmod_bridge_0_0;
-  component PetaENC_PmodENC_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    Pmod_top : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    counter : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component PetaENC_PmodENC_0_1;
-  component PetaENC_xlconstant_0_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component PetaENC_xlconstant_0_0;
+  end component PetaENC_pmod_bridge_0_1;
   signal Net : STD_LOGIC;
   signal PmodENC_0_counter : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal S_AXI_0_1_ARADDR : STD_LOGIC_VECTOR ( 8 downto 0 );
@@ -129,28 +153,60 @@ architecture STRUCTURE of PetaENC is
   signal S_AXI_0_1_WREADY : STD_LOGIC;
   signal S_AXI_0_1_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal S_AXI_0_1_WVALID : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN10_I : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN10_O : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN10_T : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN1_I : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN1_O : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN1_T : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN2_I : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN2_O : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN2_T : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN3_I : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN3_O : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN3_T : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN4_I : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN4_O : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN4_T : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN7_I : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN7_O : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN7_T : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN8_I : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN8_O : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN8_T : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN9_I : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN9_O : STD_LOGIC;
+  signal pmod_bridge_0_Pmod_out_PIN9_T : STD_LOGIC;
   signal pmod_bridge_0_in_top_bus_I : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal s_axi_aresetn_0_1 : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_gpio_0_gpio_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_gpio_0_gpio_io_t_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_pmod_bridge_0_out0_O_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out0_T_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out1_O_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out1_T_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out2_O_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out2_T_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out3_O_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out3_T_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out4_O_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out4_T_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out5_O_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out5_T_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out6_O_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out6_T_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out7_O_UNCONNECTED : STD_LOGIC;
-  signal NLW_pmod_bridge_0_out7_T_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin10_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN10_I";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin10_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN10_O";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin10_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN10_T";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin1_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN1_I";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin1_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN1_O";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin1_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN1_T";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin2_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN2_I";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin2_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN2_O";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin2_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN2_T";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin3_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN3_I";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin3_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN3_O";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin3_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN3_T";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin4_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN4_I";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin4_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN4_O";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin4_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN4_T";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin7_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN7_I";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin7_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN7_O";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin7_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN7_T";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin8_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN8_I";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin8_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN8_O";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin8_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN8_T";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin9_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN9_I";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin9_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN9_O";
+  attribute X_INTERFACE_INFO of Pmod_out_0_pin9_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN9_T";
   attribute X_INTERFACE_INFO of S_AXI_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
   attribute X_INTERFACE_INFO of S_AXI_arvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARVALID";
   attribute X_INTERFACE_INFO of S_AXI_awready : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWREADY";
@@ -176,6 +232,22 @@ architecture STRUCTURE of PetaENC is
   attribute X_INTERFACE_INFO of S_AXI_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
 begin
   Net <= s_axi_aclk;
+  Pmod_out_0_pin10_o <= pmod_bridge_0_Pmod_out_PIN10_O;
+  Pmod_out_0_pin10_t <= pmod_bridge_0_Pmod_out_PIN10_T;
+  Pmod_out_0_pin1_o <= pmod_bridge_0_Pmod_out_PIN1_O;
+  Pmod_out_0_pin1_t <= pmod_bridge_0_Pmod_out_PIN1_T;
+  Pmod_out_0_pin2_o <= pmod_bridge_0_Pmod_out_PIN2_O;
+  Pmod_out_0_pin2_t <= pmod_bridge_0_Pmod_out_PIN2_T;
+  Pmod_out_0_pin3_o <= pmod_bridge_0_Pmod_out_PIN3_O;
+  Pmod_out_0_pin3_t <= pmod_bridge_0_Pmod_out_PIN3_T;
+  Pmod_out_0_pin4_o <= pmod_bridge_0_Pmod_out_PIN4_O;
+  Pmod_out_0_pin4_t <= pmod_bridge_0_Pmod_out_PIN4_T;
+  Pmod_out_0_pin7_o <= pmod_bridge_0_Pmod_out_PIN7_O;
+  Pmod_out_0_pin7_t <= pmod_bridge_0_Pmod_out_PIN7_T;
+  Pmod_out_0_pin8_o <= pmod_bridge_0_Pmod_out_PIN8_O;
+  Pmod_out_0_pin8_t <= pmod_bridge_0_Pmod_out_PIN8_T;
+  Pmod_out_0_pin9_o <= pmod_bridge_0_Pmod_out_PIN9_O;
+  Pmod_out_0_pin9_t <= pmod_bridge_0_Pmod_out_PIN9_T;
   S_AXI_0_1_ARADDR(8 downto 0) <= S_AXI_araddr(8 downto 0);
   S_AXI_0_1_ARVALID <= S_AXI_arvalid;
   S_AXI_0_1_AWADDR(8 downto 0) <= S_AXI_awaddr(8 downto 0);
@@ -193,6 +265,14 @@ begin
   S_AXI_rresp(1 downto 0) <= S_AXI_0_1_RRESP(1 downto 0);
   S_AXI_rvalid <= S_AXI_0_1_RVALID;
   S_AXI_wready <= S_AXI_0_1_WREADY;
+  pmod_bridge_0_Pmod_out_PIN10_I <= Pmod_out_0_pin10_i;
+  pmod_bridge_0_Pmod_out_PIN1_I <= Pmod_out_0_pin1_i;
+  pmod_bridge_0_Pmod_out_PIN2_I <= Pmod_out_0_pin2_i;
+  pmod_bridge_0_Pmod_out_PIN3_I <= Pmod_out_0_pin3_i;
+  pmod_bridge_0_Pmod_out_PIN4_I <= Pmod_out_0_pin4_i;
+  pmod_bridge_0_Pmod_out_PIN7_I <= Pmod_out_0_pin7_i;
+  pmod_bridge_0_Pmod_out_PIN8_I <= Pmod_out_0_pin8_i;
+  pmod_bridge_0_Pmod_out_PIN9_I <= Pmod_out_0_pin9_i;
   s_axi_aresetn_0_1 <= s_axi_aresetn;
 PmodENC_0: component PetaENC_PmodENC_0_1
      port map (
@@ -225,35 +305,35 @@ axi_gpio_0: component PetaENC_axi_gpio_0_0
       s_axi_wstrb(3 downto 0) => S_AXI_0_1_WSTRB(3 downto 0),
       s_axi_wvalid => S_AXI_0_1_WVALID
     );
-pmod_bridge_0: component PetaENC_pmod_bridge_0_0
+pmod_bridge_0: component PetaENC_pmod_bridge_0_1
      port map (
       in_top_bus_I(3 downto 0) => pmod_bridge_0_in_top_bus_I(3 downto 0),
       in_top_bus_O(3 downto 0) => B"0000",
       in_top_bus_T(3 downto 0) => xlconstant_0_dout(3 downto 0),
-      out0_I => '0',
-      out0_O => NLW_pmod_bridge_0_out0_O_UNCONNECTED,
-      out0_T => NLW_pmod_bridge_0_out0_T_UNCONNECTED,
-      out1_I => '0',
-      out1_O => NLW_pmod_bridge_0_out1_O_UNCONNECTED,
-      out1_T => NLW_pmod_bridge_0_out1_T_UNCONNECTED,
-      out2_I => '0',
-      out2_O => NLW_pmod_bridge_0_out2_O_UNCONNECTED,
-      out2_T => NLW_pmod_bridge_0_out2_T_UNCONNECTED,
-      out3_I => '0',
-      out3_O => NLW_pmod_bridge_0_out3_O_UNCONNECTED,
-      out3_T => NLW_pmod_bridge_0_out3_T_UNCONNECTED,
-      out4_I => '0',
-      out4_O => NLW_pmod_bridge_0_out4_O_UNCONNECTED,
-      out4_T => NLW_pmod_bridge_0_out4_T_UNCONNECTED,
-      out5_I => '0',
-      out5_O => NLW_pmod_bridge_0_out5_O_UNCONNECTED,
-      out5_T => NLW_pmod_bridge_0_out5_T_UNCONNECTED,
-      out6_I => '0',
-      out6_O => NLW_pmod_bridge_0_out6_O_UNCONNECTED,
-      out6_T => NLW_pmod_bridge_0_out6_T_UNCONNECTED,
-      out7_I => '0',
-      out7_O => NLW_pmod_bridge_0_out7_O_UNCONNECTED,
-      out7_T => NLW_pmod_bridge_0_out7_T_UNCONNECTED
+      out0_I => pmod_bridge_0_Pmod_out_PIN1_I,
+      out0_O => pmod_bridge_0_Pmod_out_PIN1_O,
+      out0_T => pmod_bridge_0_Pmod_out_PIN1_T,
+      out1_I => pmod_bridge_0_Pmod_out_PIN2_I,
+      out1_O => pmod_bridge_0_Pmod_out_PIN2_O,
+      out1_T => pmod_bridge_0_Pmod_out_PIN2_T,
+      out2_I => pmod_bridge_0_Pmod_out_PIN3_I,
+      out2_O => pmod_bridge_0_Pmod_out_PIN3_O,
+      out2_T => pmod_bridge_0_Pmod_out_PIN3_T,
+      out3_I => pmod_bridge_0_Pmod_out_PIN4_I,
+      out3_O => pmod_bridge_0_Pmod_out_PIN4_O,
+      out3_T => pmod_bridge_0_Pmod_out_PIN4_T,
+      out4_I => pmod_bridge_0_Pmod_out_PIN7_I,
+      out4_O => pmod_bridge_0_Pmod_out_PIN7_O,
+      out4_T => pmod_bridge_0_Pmod_out_PIN7_T,
+      out5_I => pmod_bridge_0_Pmod_out_PIN8_I,
+      out5_O => pmod_bridge_0_Pmod_out_PIN8_O,
+      out5_T => pmod_bridge_0_Pmod_out_PIN8_T,
+      out6_I => pmod_bridge_0_Pmod_out_PIN9_I,
+      out6_O => pmod_bridge_0_Pmod_out_PIN9_O,
+      out6_T => pmod_bridge_0_Pmod_out_PIN9_T,
+      out7_I => pmod_bridge_0_Pmod_out_PIN10_I,
+      out7_O => pmod_bridge_0_Pmod_out_PIN10_O,
+      out7_T => pmod_bridge_0_Pmod_out_PIN10_T
     );
 xlconstant_0: component PetaENC_xlconstant_0_0
      port map (
