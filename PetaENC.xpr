@@ -48,6 +48,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../PetaENC_IP"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../PetaIP2"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../xilinx/vivado-library"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../vivado-library"/>

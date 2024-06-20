@@ -26,8 +26,8 @@ preplace netloc pmod_bridge_0_Pmod_out 1 2 1 NJ 340
 levelinfo -pg 1 0 100 320 480
 pagesize -pg 1 -db -bbox -sgen -150 0 620 460
 ",
-   "Grouping and No Loops_ScaleFactor":"2.71863",
-   "Grouping and No Loops_TopLeft":"200,18",
+   "Grouping and No Loops_ScaleFactor":"1.25",
+   "Grouping and No Loops_TopLeft":"-382,-46",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
 preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 20 11:51:06 2024" VIVADOVERSION="2023.2.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 20 12:06:23 2024" VIVADOVERSION="2023.2.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="PetaENC" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -209,6 +209,11 @@
         <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_wvalid"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="ip2intc_irpt_0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_gpio_0_ip2intc_irpt">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="ip2intc_irpt"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="External_Ports_s_axi_aclk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="PmodENC_0" PORT="clk"/>
@@ -371,7 +376,11 @@
             <CONNECTION INSTANCE="PmodENC_0" PORT="counter"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="ip2intc_irpt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="O" NAME="ip2intc_irpt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_gpio_0_ip2intc_irpt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ip2intc_irpt_0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="External_Ports_s_axi_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="s_axi_aclk"/>

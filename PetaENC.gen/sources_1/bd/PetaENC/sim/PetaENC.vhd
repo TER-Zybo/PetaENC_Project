@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2.2 (win64) Build 4081461 Thu Dec 14 12:24:51 MST 2023
---Date        : Thu Jun 20 11:51:06 2024
+--Date        : Thu Jun 20 12:06:23 2024
 --Host        : LAPTOP-DWAYNE running 64-bit major release  (build 9200)
 --Command     : generate_target PetaENC.bd
 --Design      : PetaENC
@@ -55,6 +55,7 @@ entity PetaENC is
     S_AXI_wready : out STD_LOGIC;
     S_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S_AXI_wvalid : in STD_LOGIC;
+    ip2intc_irpt_0 : out STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC
   );
@@ -152,6 +153,7 @@ architecture STRUCTURE of PetaENC is
   signal S_AXI_0_1_WREADY : STD_LOGIC;
   signal S_AXI_0_1_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal S_AXI_0_1_WVALID : STD_LOGIC;
+  signal axi_gpio_0_ip2intc_irpt : STD_LOGIC;
   signal pmod_bridge_0_Pmod_out_PIN10_I : STD_LOGIC;
   signal pmod_bridge_0_Pmod_out_PIN10_O : STD_LOGIC;
   signal pmod_bridge_0_Pmod_out_PIN10_T : STD_LOGIC;
@@ -179,7 +181,6 @@ architecture STRUCTURE of PetaENC is
   signal pmod_bridge_0_in_top_bus_I : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal s_axi_aresetn_0_1 : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_axi_gpio_0_ip2intc_irpt_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of Pmod_out_0_pin10_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN10_I";
   attribute X_INTERFACE_INFO of Pmod_out_0_pin10_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN10_O";
@@ -215,8 +216,10 @@ architecture STRUCTURE of PetaENC is
   attribute X_INTERFACE_INFO of S_AXI_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
   attribute X_INTERFACE_INFO of S_AXI_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";
   attribute X_INTERFACE_INFO of S_AXI_wvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI WVALID";
-  attribute X_INTERFACE_INFO of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK";
+  attribute X_INTERFACE_INFO of ip2intc_irpt_0 : signal is "xilinx.com:signal:interrupt:1.0 INTR.IP2INTC_IRPT_0 INTERRUPT";
   attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of ip2intc_irpt_0 : signal is "XIL_INTERFACENAME INTR.IP2INTC_IRPT_0, PortWidth 1, SENSITIVITY LEVEL_HIGH";
+  attribute X_INTERFACE_INFO of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK";
   attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, CLK_DOMAIN PetaENC_s_axi_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST";
   attribute X_INTERFACE_PARAMETER of s_axi_aresetn : signal is "XIL_INTERFACENAME RST.S_AXI_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
@@ -263,6 +266,7 @@ begin
   S_AXI_rresp(1 downto 0) <= S_AXI_0_1_RRESP(1 downto 0);
   S_AXI_rvalid <= S_AXI_0_1_RVALID;
   S_AXI_wready <= S_AXI_0_1_WREADY;
+  ip2intc_irpt_0 <= axi_gpio_0_ip2intc_irpt;
   pmod_bridge_0_Pmod_out_PIN10_I <= Pmod_out_0_pin10_i;
   pmod_bridge_0_Pmod_out_PIN1_I <= Pmod_out_0_pin1_i;
   pmod_bridge_0_Pmod_out_PIN2_I <= Pmod_out_0_pin2_i;
@@ -281,7 +285,7 @@ PmodENC_0: component PetaENC_PmodENC_0_1
 axi_gpio_0: component PetaENC_axi_gpio_0_0
      port map (
       gpio_io_i(3 downto 0) => PmodENC_0_counter(3 downto 0),
-      ip2intc_irpt => NLW_axi_gpio_0_ip2intc_irpt_UNCONNECTED,
+      ip2intc_irpt => axi_gpio_0_ip2intc_irpt,
       s_axi_aclk => Net,
       s_axi_araddr(8 downto 0) => S_AXI_0_1_ARADDR(8 downto 0),
       s_axi_aresetn => s_axi_aresetn_0_1,
