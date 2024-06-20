@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2.2 (win64) Build 4081461 Thu Dec 14 12:24:51 MST 2023
---Date        : Thu Jun 20 11:35:56 2024
+--Date        : Thu Jun 20 11:51:06 2024
 --Host        : LAPTOP-DWAYNE running 64-bit major release  (build 9200)
 --Command     : generate_target PetaENC.bd
 --Design      : PetaENC
@@ -86,9 +86,8 @@ architecture STRUCTURE of PetaENC is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    gpio_io_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    gpio_io_t : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    ip2intc_irpt : out STD_LOGIC;
+    gpio_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component PetaENC_axi_gpio_0_0;
   component PetaENC_PmodENC_0_1 is
@@ -180,8 +179,7 @@ architecture STRUCTURE of PetaENC is
   signal pmod_bridge_0_in_top_bus_I : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal s_axi_aresetn_0_1 : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_axi_gpio_0_gpio_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_axi_gpio_0_gpio_io_t_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_axi_gpio_0_ip2intc_irpt_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of Pmod_out_0_pin10_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN10_I";
   attribute X_INTERFACE_INFO of Pmod_out_0_pin10_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN10_O";
@@ -283,8 +281,7 @@ PmodENC_0: component PetaENC_PmodENC_0_1
 axi_gpio_0: component PetaENC_axi_gpio_0_0
      port map (
       gpio_io_i(3 downto 0) => PmodENC_0_counter(3 downto 0),
-      gpio_io_o(3 downto 0) => NLW_axi_gpio_0_gpio_io_o_UNCONNECTED(3 downto 0),
-      gpio_io_t(3 downto 0) => NLW_axi_gpio_0_gpio_io_t_UNCONNECTED(3 downto 0),
+      ip2intc_irpt => NLW_axi_gpio_0_ip2intc_irpt_UNCONNECTED,
       s_axi_aclk => Net,
       s_axi_araddr(8 downto 0) => S_AXI_0_1_ARADDR(8 downto 0),
       s_axi_aresetn => s_axi_aresetn_0_1,
