@@ -1,0 +1,21 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /nfs/xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axi_lite_ipif_v3_0_4 -L lib_cdc_v1_0_2 -L interrupt_control_v3_1_4 -L axi_gpio_v2_0_30 -L xlconstant_v1_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TestPetaENC_behav xil_defaultlib.TestPetaENC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.Debouncer [debouncer_default]
+Compiling architecture behavioral of entity xil_defaultlib.Encoder [encoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.PmodENC [pmodenc_default]
+Compiling architecture behavioral of entity xil_defaultlib.testpetaenc
+Built simulation snapshot TestPetaENC_behav

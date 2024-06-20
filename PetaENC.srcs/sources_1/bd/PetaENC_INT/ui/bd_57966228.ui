@@ -1,0 +1,44 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Addressing View_Layers":"/s_axi_aresetn_0_1:false|/Net:false|",
+   "Addressing View_ScaleFactor":"1.0",
+   "Addressing View_TopLeft":"-547,-185",
+   "Color Coded_Layers":"/s_axi_aresetn_0_1:true|/Net:true|",
+   "Color Coded_ScaleFactor":"1.0",
+   "Color Coded_TopLeft":"-307,-56",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-299,-76",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Interfaces View_Layers":"/s_axi_aresetn_0_1:false|/Net:false|",
+   "Interfaces View_ScaleFactor":"1.0",
+   "Interfaces View_TopLeft":"-403,-129",
+   "No Loops_Layers":"/s_axi_aresetn_0_1:true|/Net:true|",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-338,-6",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port Pmod_ENC -pg 1 -lvl 3 -x 620 -y 260 -defaultsOSRD
+preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port port-id_s_axi_aresetn -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_ip2intc_irpt_0 -pg 1 -lvl 3 -x 620 -y 160 -defaultsOSRD
+preplace inst PmodENC_0 -pg 1 -lvl 2 -x 450 -y 70 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 160 -y 140 -defaultsOSRD
+preplace inst pmod_bridge_0 -pg 1 -lvl 2 -x 450 -y 260 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 160 -y 260 -defaultsOSRD
+preplace netloc Net 1 0 2 20 60 N
+preplace netloc PmodENC_0_counter 1 1 2 NJ 140 600
+preplace netloc pmod_bridge_0_in_top_bus_I 1 1 1 300 80n
+preplace netloc s_axi_aresetn_0_1 1 0 1 20J 160n
+preplace netloc xlconstant_0_dout 1 1 1 N 260
+preplace netloc axi_gpio_0_ip2intc_irpt 1 1 2 NJ 160 NJ
+preplace netloc S_AXI_0_1 1 0 1 NJ 120
+preplace netloc pmod_bridge_0_Pmod_out 1 2 1 N 260
+levelinfo -pg 1 0 160 450 620
+pagesize -pg 1 -db -bbox -sgen -140 0 760 340
+"
+}
+

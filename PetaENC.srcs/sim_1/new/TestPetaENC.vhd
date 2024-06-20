@@ -42,7 +42,7 @@ architecture Behavioral of TestPetaENC is
 
     signal E_CLK : std_logic;
     signal E_PMOD : std_logic_vector(3 downto 0);
-    signal E_COUNTER : UNSIGNED(3 downto 0);
+    signal E_COUNTER : std_logic_vector(3 downto 0);
 
 begin
 

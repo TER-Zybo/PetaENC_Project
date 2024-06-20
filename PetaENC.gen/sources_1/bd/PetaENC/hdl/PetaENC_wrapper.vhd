@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
---Date        : Tue Jun 11 12:10:12 2024
+--Date        : Thu Jun 20 12:23:15 2024
 --Host        : secil10.siame.univ-tlse3.fr running 64-bit Fedora Linux 38 (Thirty Eight)
 --Command     : generate_target PetaENC_wrapper.bd
 --Design      : PetaENC_wrapper
@@ -39,6 +39,7 @@ entity PetaENC_wrapper is
     S_AXI_wready : out STD_LOGIC;
     S_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S_AXI_wvalid : in STD_LOGIC;
+    ip2intc_irpt_0 : out STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC
   );
@@ -89,7 +90,8 @@ architecture STRUCTURE of PetaENC_wrapper is
     S_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S_AXI_wvalid : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
-    s_axi_aresetn : in STD_LOGIC
+    s_axi_aresetn : in STD_LOGIC;
+    ip2intc_irpt_0 : out STD_LOGIC
   );
   end component PetaENC;
   component IOBUF is
@@ -168,6 +170,7 @@ PetaENC_i: component PetaENC
       S_AXI_wready => S_AXI_wready,
       S_AXI_wstrb(3 downto 0) => S_AXI_wstrb(3 downto 0),
       S_AXI_wvalid => S_AXI_wvalid,
+      ip2intc_irpt_0 => ip2intc_irpt_0,
       s_axi_aclk => s_axi_aclk,
       s_axi_aresetn => s_axi_aresetn
     );

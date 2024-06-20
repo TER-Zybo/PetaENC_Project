@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../PetaENC.srcs/sources_1/imports/Downloads/Debouncer.vhd" \
+"../../../../PetaENC.srcs/sources_1/imports/Downloads/Encoder.vhd" \
+"../../../../PetaENC.srcs/sources_1/imports/Downloads/PmodENC.vhd" \
+"../../../../PetaENC.gen/sources_1/bd/PetaENC/ip/PetaENC_axi_gpio_0_0/sim/PetaENC_axi_gpio_0_0.vhd" \
+"../../../../PetaENC.gen/sources_1/bd/PetaENC/ip/PetaENC_PmodENC_0_1/sim/PetaENC_PmodENC_0_1.vhd" \
+"../../../../PetaENC.gen/sources_1/bd/PetaENC/sim/PetaENC.vhd" \
+"../../../../PetaENC.gen/sources_1/bd/PetaENC/hdl/PetaENC_wrapper.vhd" \
+"../../../../PetaENC.srcs/sim_1/new/TestIP.vhd" \
+"../../../../PetaENC.srcs/sim_1/new/TestPetaENC.vhd" \
+
+# Do not sort compile order
+nosort
